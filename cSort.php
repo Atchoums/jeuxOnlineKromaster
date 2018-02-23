@@ -43,7 +43,7 @@ abstract class cSort
   * nombre de dégat ou de soin produit par le sort
   * @var int
   */
-  protected $_iMontant,
+  protected $_iPuissance,
 
   /**
   * La nature du sort et soit dégat ou soin
