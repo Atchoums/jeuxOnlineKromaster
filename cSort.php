@@ -40,16 +40,16 @@ abstract class cSort
   protected $_iCoutPointMouvement,
 
   /**
-  * dégat qu'inflige le sort
+  * nombre de dégat ou de soin produit par le sort
   * @var int
   */
-  protected $_iDegatInflige,
+  protected $_iMontant,
 
   /**
-  * montant des soins lancé
+  * La nature du sort et soit dégat ou soin
   * @var int
   */
-  protected $_iSoin;			
+  protected $_iNature;			
 			  
   /**
   * Element du sort (terre, eau, etc...)
@@ -89,53 +89,53 @@ abstract class cSort
 
   public function verifieCoutSort(personnage $personnage)
   {
-    //fonction qui vérifie si le sort peut bien être lancé par rapport au pa, pv, pm qui reste au personnage
+  	//fonction qui vérifie si le sort peut bien être lancé par rapport au pa, pv, pm qui reste au personnage
   }
 
   public function verifiePorte(pion $position $positionCible)
-	{
-		//fonction qui verifie et gère la porté du sort sur la cible par rapport à la position d'un personnage
-	}
+  {
+  	//fonction qui verifie et gère la porté du sort sur la cible par rapport à la position d'un personnage
+  }
 
-	public function verifieLigneVue(pion $position $positionCible)
-	{
-		//fonction qui vérifie et gère la ligne de vue pour lancer le sort sur la cible par rapport à la position d'un personnage
-	}
+  public function verifieLigneVue(pion $position $positionCible)
+  {
+  	//fonction qui vérifie et gère la ligne de vue pour lancer le sort sur la cible par rapport à la position d'un personnage
+  }
 
-	public function payerCoutSort(kromaster $kromaster)
-	{
-		//fonction qui paye le cout du sort qui peut être en pm,pv,pa
-	}
+  public function payerCoutSort(kromaster $kromaster)
+  {
+  	//fonction qui paye le cout du sort qui peut être en pm,pv,pa
+  }
 
   public function appliqueZoneEffet(pion $position $positionCible)
   {
-    //fonction qui applique la zone d'effet du sort et touche toute les unité dans cette zone allié comme enemi
+  	//fonction qui applique la zone d'effet du sort et touche toute les unité dans cette zone allié comme enemi
   }
 
-	public function lanceEffetAdditionnels(sort $effetAdditionnels)
-	{
-		//fonction qui applique les effets additionnels (ex: +2 pa sur la cible, invocation etc...)
-	}
+  public function lanceEffetAdditionnels(sort $effetAdditionnels)
+  {
+  	//fonction qui applique les effets additionnels (ex: +2 pa sur la cible, invocation etc...)
+  }
 
-	public function jetCC()
-	{
-		//fonction qui gère le lancer de dès coup critiques (attaque et soin uniquement)
-	}
+  public function jetCC()
+  {
+  	//fonction qui gère le lancer de dès coup critiques (attaque et soin uniquement)
+  }
 
-	public function jetArmure()
-	{
-		//fonction qui gère le lance de dès pour l'armure (soin uniquement)
-	}
+  public function jetArmure()
+  {
+  	//fonction qui gère le lance de dès pour l'armure (soin uniquement)
+  }
 
-	public function blessure()
-	{
-		//fonction qui calcul les dégats totaux infligées à la cible
-	}
+  public function blessure()
+ {
+ 	//fonction qui calcul les dégats totaux infligées à la cible
+ }
 
-	public function effetsAttente()
-	{
-		//fonction qui gère les effetes en attentes (ex : vol de vie)
-	}
+ public function effetsAttente()
+ {
+ 	//fonction qui gère les effetes en attentes (ex : vol de vie)
+ }
 
   /*****************************************************************************
   ACCESSEURS
